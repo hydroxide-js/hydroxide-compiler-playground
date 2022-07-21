@@ -6,7 +6,7 @@ import 'codemirror/mode/jsx/jsx';
 import babelPluginHydroxide from 'babel-plugin-hydroxide';
 import 'codemirror/addon/selection/active-line';
 
-import './styles/CodeMirror.css';
+import './styles/lib.css';
 import './styles/theme.css';
 import './styles/base.css';
 import './styles/select.css';
