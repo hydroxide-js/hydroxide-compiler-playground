@@ -39,6 +39,7 @@ function updateCompiled(source: string) {
 		code = Babel.transform(source, {
 			plugins: [babelPluginHydroxide],
 		}).code;
+		console.log('compiled:', code);
 	} catch (error) {
 		code = error.message;
 	}
