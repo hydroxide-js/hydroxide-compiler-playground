@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hydroxide Compiler</title>
+
+		<meta name="description" content="Hydroxide Compiler Playground" />
+
+		<link
+			rel="preload"
+			href="/fonts/Alliance-No-1-Regular.woff2"
+			as="font"
+			type="font/woff"
+			crossorigin
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div id="app">
+			<main>
+				<h1>Hydroxide Compiler</h1>
+
+				<div class="blurry blurry-1"></div>
+				<div class="blurry blurry-2"></div>
+
+				<div class="section-container">
+					<section class="editor-section">
+						<div class="title-container">
+							<h2 class="source-title">Source</h2>
+							<div class="sources">
+								<select>
+									<option>Counter</option>
+									<option>Components</option>
+									<option>Fizz Buzz</option>
+									<option>List</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="custom-editor source"></div>
+					</section>
+
+					<section class="editor-section">
+						<div class="title-container">
+							<h2 class="compile-title">Compiled</h2>
+						</div>
+						<div class="custom-editor compiled"></div>
+					</section>
+				</div>
+			</main>
+		</div>
+		<script src="index.ts" type="module"></script>
+	</body>
+</html>

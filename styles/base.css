@@ -1,0 +1,152 @@
+@font-face {
+	font-family: 'Alliance No.1';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/Alliance-No-1-Regular.woff2') format('woff2');
+	font-display: swap;
+}
+
+body {
+	font-family: 'Alliance No.1', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-feature-settings: 'ss02' on, 'ss01' on;
+	color: white;
+	font-size: 16px;
+	margin: 0;
+}
+
+html,
+body {
+	overflow-x: hidden;
+	position: relative;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.section-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 30px;
+}
+
+section {
+	overflow: hidden;
+}
+
+main {
+	padding: 40px;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+body {
+	background: black;
+}
+
+h1 {
+	font-weight: 500;
+	font-size: 40px;
+	margin-bottom: 40px;
+}
+
+h2 {
+	font-size: 22px;
+	font-weight: 400;
+	margin: 0;
+	/* margin-bottom: 24px; */
+}
+
+section {
+	margin-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+	.section-container {
+		display: block;
+		height: auto;
+	}
+
+	main {
+		padding: 20px;
+	}
+
+	.CodeMirror {
+		font-size: 12px;
+	}
+}
+
+.title-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 14px;
+	min-height: 50px;
+}
+
+/* .CodeMirror::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 40px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.3));
+  z-index: 100;
+  top: 0;
+} */
+
+.CodeMirror {
+	padding: 10px;
+	position: relative;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* .editor-section {
+	height: 100%;
+} */
+
+.custom-editor .CodeMirror {
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
+	height: inherit;
+}
+
+.custom-editor .CodeMirror-simplescroll-vertical {
+	height: 0;
+}
+
+.CodeMirror-line {
+	line-height: 1.6 !important;
+}
+
+.editor-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.custom-editor {
+	flex-grow: 1;
+	position: relative;
+}
+
+.custom-editor .CodeMirror {
+	height: 100%;
+}
+
+.compiled .cm-s-material .CodeMirror-activeline-background {
+	background: transparent;
+}
+
+.source-title {
+	color: #72a5fd;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.compile-title {
+	color: hsl(330deg 62% 60%);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
