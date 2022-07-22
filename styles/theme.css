@@ -40,7 +40,10 @@
 }
 
 .cm-s-material .CodeMirror-activeline-background {
-	background: rgba(255, 255, 255, 0.08);
+	background: transparent !important;
+}
+.cm-s-material.CodeMirror-focused .CodeMirror-activeline-background {
+	background: rgba(255, 255, 255, 0.08) !important;
 }
 
 .cm-s-material .cm-keyword {
