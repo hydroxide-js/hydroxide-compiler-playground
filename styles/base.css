@@ -41,9 +41,16 @@ main {
 	max-width: 1400px;
 	margin: 0 auto;
 }
-
+/*
 body {
 	background: black;
+} */
+
+body {
+	background: linear-gradient(90deg, black 21px, transparent 1%) center,
+		linear-gradient(black 21px, transparent 1%) center, #423f42;
+	background-size: 22px 22px;
+	background-position: top;
 }
 
 h1 {

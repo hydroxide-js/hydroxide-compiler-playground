@@ -8,27 +8,31 @@
 .blurry-1 {
 	width: 200px;
 	height: 300px;
-	background: #120730;
+	background: #220e5a;
 	top: 300px;
 	left: 20%;
 	transform: scale(3) rotate(40deg);
+	opacity: 0.5;
 }
 
 .blurry-2 {
 	width: 200px;
 	height: 300px;
-	background: #29151f;
+	background: #43192e;
 	top: 300px;
 	right: 30%;
 	transform: scale(3) rotate(40deg);
+	opacity: 0.5;
 }
 
 @media (max-width: 800px) {
 	.blurry-1 {
-		top: 100px;
+		transform: scale(2) rotate(40deg);
+		top: 200px;
 	}
 
 	.blurry-2 {
-		top: 500px;
+		transform: scale(2) rotate(40deg);
+		top: 600px;
 	}
 }
