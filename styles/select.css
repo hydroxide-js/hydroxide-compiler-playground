@@ -4,9 +4,20 @@
 	z-index: 200;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 991px) {
 	.sources {
-		transform: translate(-15px, 70px);
+		transform: translate(-20px, 40px);
+	}
+}
+
+@media (max-width: 991px) {
+	.title-container {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.title-container .sources {
+		margin-top: 30px;
 	}
 }
 
@@ -23,6 +34,7 @@
 
 .sources select {
 	padding: 0.6em 1.2em;
+	padding-bottom: 0.8em;
 	background: rgba(0, 0, 0, 0.1);
 	border: 2px solid rgba(255, 255, 255, 0.1);
 	color: hsl(200, 5%, 76%);

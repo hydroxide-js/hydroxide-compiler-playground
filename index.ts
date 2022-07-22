@@ -17,8 +17,16 @@ import { sources } from './sources';
 const sourceEl = document.querySelector('.source') as HTMLElement;
 const compiledEl = document.querySelector('.compiled') as HTMLElement;
 
+const url = new URL(window.location.href);
+const show = url.searchParams.get('show');
+let currentSelected = show ? Number(show) - 1 : 0;
+
+if (currentSelected > sources.length - 1 || currentSelected < 0) {
+	currentSelected = 0;
+}
+
 const sourceEditor = Codemirror(sourceEl, {
-	value: sources[0],
+	value: sources[currentSelected],
 	mode: 'jsx',
 	theme: 'material',
 	readOnly: false,
@@ -64,8 +72,6 @@ sourceEditor.on('changes', () => {
 
 // -----
 
-let currentSelected = 0;
-
 const sourceSelector = document.querySelector('.sources select') as HTMLSelectElement;
 sourceSelector.addEventListener('change', () => {
 	if (sourceSelector.selectedIndex === currentSelected) return;
@@ -74,3 +80,5 @@ sourceSelector.addEventListener('change', () => {
 	sourceEditor.setValue(source);
 	updateCompiled(source);
 });
+
+sourceSelector.selectedIndex = currentSelected;

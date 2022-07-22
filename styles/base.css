@@ -70,7 +70,11 @@ section {
 	margin-bottom: 30px;
 }
 
-@media (max-width: 800px) {
+.CodeMirror {
+	font-size: 16px;
+}
+
+@media (max-width: 991px) {
 	.section-container {
 		display: block;
 		height: auto;
@@ -173,4 +177,14 @@ section {
 	padding: 1em;
 	background: black;
 	margin-bottom: 10px;
+}
+
+.github-link {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+h1 {
+	padding-right: 50px;
 }
