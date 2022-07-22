@@ -3,7 +3,7 @@ import Codemirror from 'codemirror';
 import * as Babel from '@babel/standalone';
 import 'codemirror/mode/jsx/jsx';
 
-import babelPluginHydroxide from 'babel-plugin-test-hx';
+import babelPluginHydroxide from 'babel-plugin-hydroxide';
 import 'codemirror/addon/selection/active-line';
 
 import './styles/lib.css';
