@@ -188,3 +188,9 @@ section {
 h1 {
 	padding-right: 50px;
 }
+
+@media (min-width: 991px) {
+	section.editor-section {
+		min-height: 300px;
+	}
+}

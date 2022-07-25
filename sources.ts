@@ -38,10 +38,10 @@ function App() {
   const count = reactive(0);
 
   return (
-    <div class="container">
+    <div>
       <input type="range" bind-value={count} />
-      <h1> {count()} is </h1>
-      <p if={count() % 15 === 0}> FizzBuzz </p>
+      <h1> count is {count()} </h1>
+      <p if={count() % 15 === 0}> Fizz Buzz </p>
       <p elseIf={count() % 3 === 0}> Fizz </p>
       <p elseIf={count() % 5 === 0}> Buzz </p>
       <p else> Weird </p>
@@ -80,8 +80,6 @@ function Icon() {
         cx="50"
         cy="50"
         r="40"
-        stroke="orange"
-        stroke-width="4"
         fill="yellow"
       />
     </svg>
@@ -102,7 +100,7 @@ export function App() {
 `;
 
 const attributes = `\
-export function Picture(props) {
+function Picture(props) {
   return (
     <picture>
       <source
