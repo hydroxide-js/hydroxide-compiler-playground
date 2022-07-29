@@ -42,8 +42,8 @@ function App() {
       <input type="range" bind-value={count} />
       <h1> count is {count()} </h1>
       <p if={count() % 15 === 0}> Fizz Buzz </p>
-      <p elseIf={count() % 3 === 0}> Fizz </p>
-      <p elseIf={count() % 5 === 0}> Buzz </p>
+      <p else-if={count() % 3 === 0}> Fizz </p>
+      <p else-if={count() % 5 === 0}> Buzz </p>
       <p else> Weird </p>
     </div>
   );
