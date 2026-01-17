@@ -1,6 +1,6 @@
 # Hydroxide Compiler Playground
 
-https://hydroxide-compiler-playground.pages.dev/
+Try it out: [hydroxide-playground.vercel.app](https://hydroxide-playground.vercel.app/)
 
 <br/>
 
