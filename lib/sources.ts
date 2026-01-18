@@ -1,3 +1,16 @@
+export const sourceNames = [
+  "State",
+  "Components",
+  "Conditional Rendering",
+  "List Rendering",
+  "Input Binding",
+  "Attributes",
+  "Refs",
+  "JSX",
+  "SVG",
+  "Invalid nesting",
+] as const;
+
 const counter = `\
 import { reactive } from 'hydroxide';
 
@@ -6,12 +19,9 @@ function App() {
   const increment = () => count.set(count() + 1)
 
   return (
-    <div>
-      <p> Counter Example </p>
-      <button on-click={increment}>
-        count is {count()}
-      </button>
-    </div>
+    <button on-click={increment}>
+      count is {count()}
+    </button>
   )
 }
 `;
@@ -28,7 +38,6 @@ function App() {
     </div>
   )
 }
-
 `;
 
 const FizzBuzz = `\
@@ -142,14 +151,14 @@ const invalidNesting = `\
 `;
 
 export const sources = [
-	counter,
-	components,
-	FizzBuzz,
-	List,
-	inputBinding,
-	attributes,
-	refs,
-	JSXOnly,
-	SVG,
-	invalidNesting,
+  counter,
+  components,
+  FizzBuzz,
+  List,
+  inputBinding,
+  attributes,
+  refs,
+  JSXOnly,
+  SVG,
+  invalidNesting,
 ];

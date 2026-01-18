@@ -1,0 +1,218 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-serif);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+/* Vercel-inspired light theme */
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #fafafa;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #000000;
+  --primary-faded: rgba(0, 0, 0, 0.1);
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #000000;
+  --muted: #f5f5f5;
+  --muted-foreground: #666666;
+  --muted-foreground-faded: rgba(102, 102, 102, 0.2);
+  --accent: #f5f5f5;
+  --accent-foreground: #000000;
+  --destructive: #ff0000;
+  --border: #eaeaea;
+  --input: #eaeaea;
+  --ring: #000000;
+  --chart-1: #000000;
+  --chart-2: #2d2d2d;
+  --chart-3: #666666;
+  --chart-4: #999999;
+  --chart-5: #cccccc;
+  --radius: 0.5rem;
+  --sidebar: #fafafa;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #000000;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f0f0f0;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #eaeaea;
+  --sidebar-ring: #000000;
+}
+
+/* Vercel-inspired dark theme */
+.dark {
+  --background: #000000;
+  --foreground: #ededed;
+  --card: #111111;
+  --card-foreground: #ededed;
+  --popover: #111111;
+  --popover-foreground: #ededed;
+  --primary: #ffffff;
+  --primary-faded: rgba(255, 255, 255, 0.1);
+  --primary-foreground: #000000;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #ededed;
+  --muted: #1a1a1a;
+  --muted-foreground: #888888;
+  --accent: #1a1a1a;
+  --accent-foreground: #ededed;
+  --destructive: #ff4444;
+  --border: #2d2d2d;
+  --input: #2d2d2d;
+  --ring: #ffffff;
+  --chart-1: #ffffff;
+  --chart-2: #cccccc;
+  --chart-3: #999999;
+  --chart-4: #666666;
+  --chart-5: #2d2d2d;
+  --sidebar: #000000;
+  --sidebar-foreground: #ededed;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #ededed;
+  --sidebar-border: #2d2d2d;
+  --sidebar-ring: #ffffff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* CodeMirror editor styling */
+.editor-container .cm-editor {
+  font-family:
+    var(--font-mono), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco,
+    Consolas, monospace;
+}
+
+.editor-container .cm-editor,
+.editor-container .cm-editor .cm-scroller,
+.editor-container .cm-editor .cm-content,
+.editor-container .cm-editor .cm-gutters {
+  background: var(--background) !important;
+}
+
+.editor-container .cm-scroller {
+  line-height: 1.6;
+}
+
+.editor-container .cm-content {
+  padding: 16px 0;
+}
+
+.editor-container .cm-line {
+  padding: 0 16px;
+}
+
+.editor-container .cm-gutters {
+  border-right: 1px solid var(--border) !important;
+  padding-left: 8px;
+}
+
+.editor-container .cm-gutter {
+  min-width: 40px;
+}
+
+.editor-container .cm-lineNumbers .cm-gutterElement {
+  color: var(--muted-foreground);
+  font-size: 12px;
+  padding-right: 12px;
+}
+
+.editor-container .cm-activeLineGutter {
+  background: transparent !important;
+}
+
+.editor-container .cm-activeLine {
+  background: var(--accent) !important;
+}
+
+.editor-container .cm-cursor {
+  border-left-color: var(--primary) !important;
+}
+
+.editor-container .cm-selectionBackground {
+  background: var(--primary-faded) !important;
+}
+
+.editor-container .cm-focused .cm-selectionBackground {
+  background: var(--primary-faded) !important;
+}
+
+/* hide all scrollbars */
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Full height editor */
+.editor-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-container .cm-editor {
+  flex: 1;
+  min-height: 0;
+}
+
+.editor-container .cm-editor .cm-scroller {
+  flex: 1;
+  min-height: 0;
+}
